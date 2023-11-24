@@ -1,0 +1,28 @@
+<mat-card class="register-box">
+    <mat-card-header>
+        <mat-card-title>REGISTRO DE DATOS</mat-card-title>
+        <mat-card-subtitle>Registre Sus datos</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div>
+            <mat-form-field class="caja">
+                <mat-label>Email: </mat-label>
+                <input type="email" matInput placeholder="pat@example.com" #userEmail required>
+            </mat-form-field>
+
+            <mat-form-field class="caja">
+                <mat-label>Clave</mat-label>
+                <input type="password" matInput required #pass>
+            </mat-form-field>
+            <mat-form-field class="caja">
+                <mat-label>Vuelva a escribir su clave</mat-label>
+                <input type="password" matInput required #pass1>
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary" (click)="autservice.registrar(userEmail.value , pass.value,
+pass1.value)">Guardar</button>
+        <button mat-raised-button color="primary">Nuevo</button>
+    </mat-card-actions>
+</mat-card>

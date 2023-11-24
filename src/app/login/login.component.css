@@ -1,0 +1,18 @@
+.login-box {
+  max-width: 400px;
+  margin: 20px auto;
+}
+.caja {
+  width: 100%;
+}
+
+.boton {
+  margin: 10px;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
