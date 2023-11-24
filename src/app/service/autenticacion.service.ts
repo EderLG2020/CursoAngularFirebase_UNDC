@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-
+import firebase from 'firebase/compat/app';
 @Injectable({
   providedIn: 'root',
 })
@@ -50,6 +50,29 @@ export class AutenticacionService {
         .catch((error) => {
           window.alert(error.message);
         });
+    }
+  }
+
+  async loginWithGoogle() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    try {
+      const result = await this.afAuth.signInWithPopup(provider);
+      this.router.navigate(['principal']);
+    } catch (error) {
+      console.error('Error al iniciar sesión con Google:', error);
+    }
+  }
+
+  async loginWithFacebook() {
+    try {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      const result = await this.afAuth.signInWithPopup(provider);
+      this.router.navigate(['principal']);
+    } catch (error) {
+      console.error('Error al iniciar sesión con Facebook:', error);
+      alert(
+        'Error al iniciar sesión con Facebook. Por favor, inténtalo de nuevo.'
+      );
     }
   }
 }

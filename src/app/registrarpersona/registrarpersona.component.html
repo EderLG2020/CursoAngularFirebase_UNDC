@@ -1,0 +1,32 @@
+<mat-card class="card-box">
+    <mat-card-header>
+        <mat-card-title>REGISTRO DE PERSONAS</mat-card-title>
+        <mat-card-subtitle>DATOS DE LA PERSONA</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="this.form">
+            <mat-form-field class="caja">
+                <mat-label>DNI: </mat-label>
+                <input type="text" matInput formControlName="id" required>
+            </mat-form-field>
+            <mat-form-field class="caja">
+                <mat-label>NOMBRES: </mat-label>
+                <input type="text" matInput formControlName="nombres" required>
+            </mat-form-field>
+            <mat-form-field class="caja">
+                <mat-label>APELLIDOS: </mat-label>
+                <input type="text" matInput formControlName="apellidos" required>
+            </mat-form-field>
+            <mat-form-field class="caja">
+                <mat-label>Género</mat-label>
+                <mat-select formControlName="genero">
+                    <mat-option value="Masculino">Masculino</mat-option>
+                    <mat-option value="Femenino">Femenino</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button [mat-dialog-close]="true" color="primary"> GUARDAR </button>
+    </mat-card-actions>
+</mat-card>

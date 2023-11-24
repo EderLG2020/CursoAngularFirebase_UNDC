@@ -19,12 +19,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegistrarpersonaComponent } from './registrarpersona/registrarpersona.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PrincipalComponent,
     RegistrousuarioComponent,
+    RegistrarpersonaComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatSelectModule,
+    ReactiveFormsModule,
   ],
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
   bootstrap: [AppComponent],

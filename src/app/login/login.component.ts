@@ -19,4 +19,10 @@ export class LoginComponent {
   openDialog() {
     this.dialog.open(RegistrousuarioComponent);
   }
+  loginWithGoogle() {
+    this.autservice.loginWithGoogle();
+  }
+  loginWithFacebook() {
+    this.autservice.loginWithFacebook();
+  }
 }

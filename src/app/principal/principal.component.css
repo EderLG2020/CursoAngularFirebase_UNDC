@@ -1,3 +1,17 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.content {
+  padding: 16px;
+  text-align: center;
+}
+.content > mat-card {
+  width: 200px;
+}
+.card-image {
+  width: 64px;
+  margin: 0px auto;
+}
+.boton {
+  margin: 10px;
+}

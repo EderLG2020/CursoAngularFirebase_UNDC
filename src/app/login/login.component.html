@@ -14,11 +14,18 @@
                 </mat-form-field>
             </div>
         </mat-card-content>
-        <mat-card-actions align="end">
-            <button mat-raised-button color="primary" class="boton" (click)="autservice.login(userEmail.value,
-userPwd.value)">INGRESAR</button>
-            <button mat-raised-button color="accent" class="boton" (click)="openDialog()">CREAR
-                CUENTA</button>
+        <mat-card-actions align="end" class="botones-grid">
+            <button mat-raised-button color="primary" class="boton"
+                (click)="autservice.login(userEmail.value, userPwd.value)">INGRESAR</button>
+            <button mat-raised-button color="accent" class="boton" (click)="openDialog()">CREAR</button>
+            <button mat-raised-button color="warn" class="boton" (click)="loginWithGoogle()">
+                <mat-icon>google</mat-icon> GOOGLE
+            </button>
+
+            <button mat-raised-button color="primary" class="boton" (click)="loginWithFacebook()">
+                <mat-icon>facebook</mat-icon> FACEBOOK
+            </button>
+
         </mat-card-actions>
     </mat-card>
 </div>
