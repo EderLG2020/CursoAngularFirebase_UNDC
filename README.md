@@ -1,27 +1,46 @@
-# Angularundc
+# Proyecto Angular y Firebase "SisUndcDarkEd"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+##Datos personales
 
-## Development server
+- **Autor:** Eder Nexón Llancari Guerra
+- **Edad:** 21
+- **Universidad:** Universidad Nacional De Cañete
+- **Correo Institucional:** 1976589534@undc.edu.pe
+- **Correo Personal:** ederlg2021@gmail.com
+- **Turno:** Noche
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Descripción
 
-## Code scaffolding
+Este proyecto, llamado SisUndcDarkEd, combina Angular con Firebase para crear una aplicación web dinámica y poderosa.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Características
 
-## Build
+(Tu lista de características aquí)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- sisundcdarked
+- Característica 2
+- Característica 3
 
-## Running unit tests
+## Dependencias
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm install firebase@9.17.1
+npm install -g firebase-tools
+ng add @angular/fire
+npm install rxfire@6.0.3
+ng add @angular/material
 
-## Running end-to-end tests
+## Comandos Útiles
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para generar un componente sin archivos TypeScript y pruebas unitarias:
 
-## Further help
+```bash
+ng g c nombre-componente --skipTests --skipSelector
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para generar un proyecto sin archivo test
+
+```bash
+ng new angularundc --skipTests
+```
+
+compat para firebase -> atento por la version

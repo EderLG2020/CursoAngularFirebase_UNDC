@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sisundcdarked": {
+      "hosting": {
+        "angularundc": [
+          "sisundcdarked"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sisundcdarked"
+  }
+}
