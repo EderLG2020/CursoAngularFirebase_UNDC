@@ -1,0 +1,47 @@
+<div mat-form>
+    <mat-form-field class="search">
+        <mat-label class="etiqueta">Buscar:</mat-label>
+        <input matInput (keyup)="aplicarfiltro($event)" #input>
+    </mat-form-field>
+</div>
+<div class="tabla">
+    <table mat-table [dataSource]="datos" matSort>
+        <ng-container matColumnDef="DNI">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> DNI </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="NOMBRES">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> NOMBRES </th>
+            <td mat-cell *matCellDef="let row"> {{row.Nombres}} </td>
+        </ng-container>
+        <ng-container matColumnDef="APELLIDOS">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> APELLIDOS </th>
+            <td mat-cell *matCellDef="let row"> {{row.Apellidos}} </td>
+        </ng-container>
+        <ng-container matColumnDef="GENERO">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> GENERO </th>
+            <td mat-cell *matCellDef="let row"> {{row.Genero}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ACCIONES">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header ngClass="celdita">ACCIONES</th>
+            <td mat-cell *matCellDef="let row">
+                <button mat-fab color="primary" class="icono" matTooltip="Editar"
+                    matTooltipClass="example-tooltip-uppercase" (click)="editar(row)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-fab color="warn" class="icono" matTooltip="Eliminar"
+                    matTooltipClass="example-tooltip-uppercase" (click)="eliminar(row.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="encabezado"></tr>
+        <tr mat-row *matRowDef="let row; columns: encabezado;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No hay datos "{{input.value}}"</td>
+        </tr>
+    </table>
+
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+</div>

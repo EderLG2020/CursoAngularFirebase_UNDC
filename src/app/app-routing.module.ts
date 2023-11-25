@@ -11,6 +11,7 @@ const routes: Routes = [
     component: PrincipalComponent,
     canActivate: [AuthGuard],
   },
+
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AutenticacionService } from '../service/autenticacion.service';
 import { MatDialog } from '@angular/material/dialog';
 import { RegistrarpersonaComponent } from '../registrarpersona/registrarpersona.component';
+import { ListarpersonaComponent } from '../listarpersona/listarpersona.component';
 
 @Component({
   selector: 'app-principal',
@@ -16,5 +17,8 @@ export class PrincipalComponent {
 
   abrirregistrarpersona() {
     this.dialog.open(RegistrarpersonaComponent);
+  }
+  abrirlistapersona() {
+    this.dialog.open(ListarpersonaComponent);
   }
 }

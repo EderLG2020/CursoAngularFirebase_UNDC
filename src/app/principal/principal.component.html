@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span>APP</span>
+        <span>SisUndcDarkEd</span>
         <span class="example-spacer"></span>
 
         <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-
@@ -29,7 +29,7 @@
             <p>Gestión de datos de personas</p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary">LISTA</button>
+            <button mat-raised-button color="primary" class="boton" (click)="abrirlistapersona()">LISTA</button>
             <button mat-raised-button color="accent" class="boton" (click)="abrirregistrarpersona()">NUEVO</button>
         </mat-card-actions>
     </mat-card>

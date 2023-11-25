@@ -44,3 +44,7 @@ ng new angularundc --skipTests
 ```
 
 compat para firebase -> atento por la version
+
+Se hizo un cambio en node_module
+
+Pagina -> https://sisundcdarked.web.app

@@ -22,7 +22,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrarpersonaComponent } from './registrarpersona/registrarpersona.component';
-
+import { ListarpersonaComponent } from './listarpersona/listarpersona.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +33,7 @@ import { RegistrarpersonaComponent } from './registrarpersona/registrarpersona.c
     PrincipalComponent,
     RegistrousuarioComponent,
     RegistrarpersonaComponent,
+    ListarpersonaComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,9 @@ import { RegistrarpersonaComponent } from './registrarpersona/registrarpersona.c
     MatMenuModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
   bootstrap: [AppComponent],
